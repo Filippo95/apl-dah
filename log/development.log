@@ -1,0 +1,355 @@
+  [1m[36m (19.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (17.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateSeminaris (20180405062508)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "seminaris" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "da" date, "al" date, "luogo" text, "nazione" varchar, "titolo" varchar, "descrizione" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180405062508"]]
+  [1m[35m (19.2ms)[0m  commit transaction
+Migrating to CreateAttivita (20180405062519)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "attivita" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data" date, "titolo" varchar, "luogo" text, "descrizione" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180405062519"]]
+  [1m[35m (16.1ms)[0m  commit transaction
+Migrating to CreateCorsis (20180405062527)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "corsis" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data" date, "luogo" text, "titolo" varchar, "contatto" text, "descrizione" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180405062527"]]
+  [1m[35m (16.3ms)[0m  commit transaction
+Migrating to CreateLibris (20180405062536)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "libris" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titolo" varchar, "prezzo" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180405062536"]]
+  [1m[35m (15.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 2.34.225.35 at 2018-04-05 06:27:28 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 36ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/seminaris" for 2.34.225.35 at 2018-04-05 06:27:35 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeminarisController#index as HTML
+  [1m[35mSeminari Load (0.2ms)[0m  SELECT "seminaris".* FROM "seminaris"
+  Rendered seminaris/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 6074ms (Views: 6070.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/libris.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2.34.225.35 at 2018-04-05 06:27:41 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/attivita.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2.34.225.35 at 2018-04-05 06:27:42 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/corsis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2.34.225.35 at 2018-04-05 06:27:42 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/attivitas" for 2.34.225.35 at 2018-04-05 06:27:45 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/attivitas"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (18.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (80.4ms)
+
+
+Started GET "/attivita" for 2.34.225.35 at 2018-04-05 06:27:58 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AttivitaController#index as HTML
+  [1m[36mAttivitum Load (0.3ms)[0m  [1mSELECT "attivita".* FROM "attivita"[0m
+  Rendered attivita/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 197ms (Views: 194.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/libris" for 2.34.225.35 at 2018-04-05 06:28:09 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LibrisController#index as HTML
+  [1m[35mLibri Load (0.4ms)[0m  SELECT "libris".* FROM "libris"
+  Rendered libris/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 82ms (Views: 77.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/corsis" for 2.34.225.35 at 2018-04-05 06:28:10 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CorsisController#index as HTML
+  [1m[36mCorsi Load (0.3ms)[0m  [1mSELECT "corsis".* FROM "corsis"[0m
+  Rendered corsis/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 53ms (Views: 49.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/seminaris" for 2.34.225.35 at 2018-04-05 06:28:11 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeminarisController#index as HTML
+  [1m[35mSeminari Load (0.2ms)[0m  SELECT "seminaris".* FROM "seminaris"
+  Rendered seminaris/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/seminaris" for 2.34.225.35 at 2018-04-05 06:28:47 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeminarisController#index as HTML
+  [1m[36mSeminari Load (0.3ms)[0m  [1mSELECT "seminaris".* FROM "seminaris"[0m
+  Rendered seminaris/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 59ms (Views: 56.9ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20180405062958)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180405062958"]]
+  [1m[36m (20.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/seminaris" for 2.34.225.35 at 2018-04-05 06:30:33 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x007f5aa7e95aa8>):
+  config/routes.rb:2:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.2ms)
+
+
+Started GET "/seminaris" for 2.34.225.35 at 2018-04-05 06:31:52 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SeminarisController#index as HTML
+  [1m[35mSeminari Load (0.2ms)[0m  SELECT "seminaris".* FROM "seminaris"
+  Rendered seminaris/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 470ms (Views: 456.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/s" for 2.34.225.35 at 2018-04-05 06:32:01 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/s"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (20.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.5ms)
+
+
+Started GET "/" for 2.34.225.35 at 2018-04-05 06:33:45 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/sign_in" for 2.34.225.35 at 2018-04-05 06:33:46 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (8.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 125ms (Views: 113.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/attivita" for 2.34.225.35 at 2018-04-05 06:33:50 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AttivitaController#index as HTML
+  [1m[36mAttivitum Load (0.3ms)[0m  [1mSELECT "attivita".* FROM "attivita"[0m
+  Rendered attivita/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 71ms (Views: 67.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/corsis" for 2.34.225.35 at 2018-04-05 06:33:52 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CorsisController#index as HTML
+  [1m[35mCorsi Load (0.4ms)[0m  SELECT "corsis".* FROM "corsis"
+  Rendered corsis/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 79ms (Views: 74.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/libris" for 2.34.225.35 at 2018-04-05 06:33:52 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LibrisController#index as HTML
+  [1m[36mLibri Load (0.3ms)[0m  [1mSELECT "libris".* FROM "libris"[0m
+  Rendered libris/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 75ms (Views: 71.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/seminaris" for 2.34.225.35 at 2018-04-05 06:33:53 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeminarisController#index as HTML
+  [1m[35mSeminari Load (0.3ms)[0m  SELECT "seminaris".* FROM "seminaris"
+  Rendered seminaris/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 68ms (Views: 64.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/seminaris" for 2.34.225.35 at 2018-04-05 06:34:21 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/ubuntu/workspace/config/routes.rb:67: syntax error, unexpected keyword_end, expecting end-of-input):
+  config/routes.rb:67: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.7ms)
+
+
+Started GET "/seminaris" for 2.34.225.35 at 2018-04-05 06:34:48 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeminarisController#index as HTML
+  [1m[36mSeminari Load (0.5ms)[0m  [1mSELECT "seminaris".* FROM "seminaris"[0m
+  Rendered seminaris/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 56ms (Views: 52.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/seminaris" for 2.34.225.35 at 2018-04-05 06:34:51 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeminarisController#index as HTML
+  [1m[35mSeminari Load (0.3ms)[0m  SELECT "seminaris".* FROM "seminaris"
+  Rendered seminaris/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 2.34.225.35 at 2018-04-05 06:34:56 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/sign_in" for 2.34.225.35 at 2018-04-05 06:34:57 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 65ms (Views: 56.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/attivita" for 2.34.225.35 at 2018-04-05 06:35:55 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AttivitaController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 2.34.225.35 at 2018-04-05 06:35:55 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 71ms (Views: 62.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/libris" for 2.34.225.35 at 2018-04-05 06:35:59 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LibrisController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 2.34.225.35 at 2018-04-05 06:35:59 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 62ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/seminaris" for 2.34.225.35 at 2018-04-05 06:36:01 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeminarisController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 2.34.225.35 at 2018-04-05 06:36:01 +0000
+Cannot render console from 2.34.225.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)
