@@ -15836,3 +15836,79 @@ Processing by SeminarisController#index as HTML
   [1m[36mSeminari Load (13.3ms)[0m  [1mSELECT `seminaris`.* FROM `seminaris`[0m
   Rendered seminaris/index.html.erb within layouts/application (16.3ms)
 Completed 200 OK in 73ms (Views: 58.6ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/corsis/getattached/1" for 2.34.236.0 at 2018-04-17 11:58:52 +0000
+Cannot render console from 2.34.236.0! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CorsisController#getattached as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mCorsi Load (14.0ms)[0m  SELECT  `corsis`.* FROM `corsis` WHERE `corsis`.`id` = 1 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 310ms (Views: 220.9ms | ActiveRecord: 42.7ms)
+
+
+Started GET "/corsis/getattached/2" for 2.34.236.0 at 2018-04-17 11:58:54 +0000
+Cannot render console from 2.34.236.0! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CorsisController#getattached as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mCorsi Load (14.1ms)[0m  [1mSELECT  `corsis`.* FROM `corsis` WHERE `corsis`.`id` = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 18ms (Views: 0.6ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/images/original/missing.png" for 2.34.236.0 at 2018-04-17 11:58:57 +0000
+Cannot render console from 2.34.236.0! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (91.3ms)
+
+
+Started GET "/corsis/getattached/1" for 2.34.236.0 at 2018-04-17 11:59:06 +0000
+Cannot render console from 2.34.236.0! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CorsisController#getattached as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mCorsi Load (14.1ms)[0m  SELECT  `corsis`.* FROM `corsis` WHERE `corsis`.`id` = 1 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 17ms (Views: 0.8ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/corsis/getattached/2" for 2.34.236.0 at 2018-04-17 11:59:07 +0000
+Cannot render console from 2.34.236.0! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CorsisController#getattached as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mCorsi Load (14.0ms)[0m  [1mSELECT  `corsis`.* FROM `corsis` WHERE `corsis`.`id` = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 17ms (Views: 0.7ms | ActiveRecord: 14.0ms)
