@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
   
+  resources :cat_libris
+  resources :photo_attivita
+  resources :libris
+  resources :libris
+  get 'corsis/getattached/:id'=> 'corsis#getattached'
+  
+  get 'seminaris/getattached/:id'=> 'seminaris#getattached'
+  
+  get 'libris/getfirstattached/:id'=> 'libris#getfirstattached'
+  get 'libris/getsecondattached/:id'=> 'libris#getsecondattached'
+  
+  
+  get 'photo_attivita/getattached/:id_attivita'=> 'photo_attivita#getattached'
   authenticated :user do
 root to: 'seminaris#index', as: :authenticated_root
 end

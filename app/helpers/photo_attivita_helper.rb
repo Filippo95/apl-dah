@@ -1,0 +1,2 @@
+module PhotoAttivitaHelper
+end

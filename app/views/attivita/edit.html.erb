@@ -1,6 +1,13 @@
-<h1>Editing Attivitum</h1>
+<div class="page-header">
+  <%= link_to attivita_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Indietro
+  <% end %>
+  <%= link_to @attivitum, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Mostra
+  <% end %>
+  <h1>Modifica Attività</h1>
+</div>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @attivitum %> |
-<%= link_to 'Back', attivita_path %>

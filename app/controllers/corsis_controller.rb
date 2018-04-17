@@ -1,6 +1,6 @@
 class CorsisController < ApplicationController
   before_action :set_corsi, only: [:show, :edit, :update, :destroy]
-
+ skip_before_action :authenticate_user!
   # GET /corsis
   # GET /corsis.json
   def index
@@ -23,6 +23,16 @@ class CorsisController < ApplicationController
 
   # POST /corsis
   # POST /corsis.json
+  def getattached
+    @corsi = Corsi.find(params[:id])
+  
+   respond_to do |format|
+ 
+    format.html { render :text => @corsi.image.url.html_safe}
+  end
+  end
+  
+  
   def create
     @corsi = Corsi.new(corsi_params)
 
@@ -69,6 +79,6 @@ class CorsisController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def corsi_params
-      params.require(:corsi).permit(:data, :luogo, :titolo, :contatto, :descrizione)
+      params.require(:corsi).permit(:data, :luogo, :titolo, :contatto, :descrizione, :image)
     end
 end

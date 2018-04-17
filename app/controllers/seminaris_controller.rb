@@ -1,6 +1,6 @@
 class SeminarisController < ApplicationController
   before_action :set_seminari, only: [:show, :edit, :update, :destroy]
-
+ skip_before_action :authenticate_user!
   # GET /seminaris
   # GET /seminaris.json
   def index
@@ -15,6 +15,14 @@ class SeminarisController < ApplicationController
   # GET /seminaris/new
   def new
     @seminari = Seminari.new
+  end
+  def getattached
+    @seminari = Seminari.find(params[:id])
+  
+   respond_to do |format|
+ 
+    format.html { render :text => @seminari.image.url.html_safe}
+  end
   end
 
   # GET /seminaris/1/edit
@@ -69,6 +77,6 @@ class SeminarisController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def seminari_params
-      params.require(:seminari).permit(:da, :al, :luogo, :nazione, :titolo, :descrizione)
+      params.require(:seminari).permit(:da, :al, :luogo, :nazione, :titolo, :descrizione,:image)
     end
 end

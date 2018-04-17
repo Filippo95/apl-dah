@@ -1,0 +1,31 @@
+<div class="page-header">
+  <%= link_to new_cat_libri_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Nuova Categoria
+  <% end %>
+  <h1>Lista Categorie</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Nome</th>
+            <th>Descrizione</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @cat_libris) do |cat_libri| %>
+            <td><%= cat_libri.nome %></td>
+            <td><%= cat_libri.descrizione %></td>
+            <td><%= link_to 'Mostra', cat_libri %></td>
+            <td><%= link_to 'Modifica', edit_cat_libri_path(cat_libri) %></td>
+            <td><%= link_to 'Elimina', cat_libri, method: :delete, data: { confirm: 'Sei sicuro?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

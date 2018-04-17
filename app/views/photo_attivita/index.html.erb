@@ -1,0 +1,31 @@
+<div class="page-header">
+  <%= link_to new_photo_attivitum_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Photo attivitum
+  <% end %>
+  <h1>Listing photo_attivita</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Id attivita</th>
+            <th>Titolo</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @photo_attivita) do |photo_attivitum| %>
+            <td><%= photo_attivitum.id_attivita %></td>
+            <td><%= photo_attivitum.titolo %></td>
+            <td><%= link_to 'Show', photo_attivitum %></td>
+        <td><%= link_to 'Edit', edit_photo_attivitum_path(photo_attivitum) %></td>
+        <td><%= link_to 'Destroy', photo_attivitum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

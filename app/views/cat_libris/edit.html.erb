@@ -1,0 +1,13 @@
+<div class="page-header">
+  <%= link_to cat_libris_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Indietro
+  <% end %>
+  <%= link_to @cat_libri, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Mostra
+  <% end %>
+  <h1>Modifica Categoria</h1>
+</div>
+
+<%= render 'form' %>

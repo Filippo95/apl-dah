@@ -1,6 +1,13 @@
-<h1>Editing Seminari</h1>
+<div class="page-header">
+  <%= link_to seminaris_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Indietro
+  <% end %>
+  <%= link_to @seminari, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Mostra
+  <% end %>
+  <h1>Modifica Seminari</h1>
+</div>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @seminari %> |
-<%= link_to 'Back', seminaris_path %>

@@ -1,6 +1,13 @@
-<h1>Editing Libri</h1>
+<div class="page-header">
+  <%= link_to libris_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Indietro
+  <% end %>
+  <%= link_to @libri, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Mostra
+  <% end %>
+  <h1>Modifica libri</h1>
+</div>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @libri %> |
-<%= link_to 'Back', libris_path %>

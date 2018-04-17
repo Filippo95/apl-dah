@@ -1,33 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to new_attivitum_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Nuova Attività
+  <% end %>
+  <h1>Lista Attività</h1>
+</div>
 
-<h1>Listing Attivita</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Data</th>
-      <th>Titolo</th>
-      <th>Luogo</th>
-      <th>Descrizione</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @attivita.each do |attivitum| %>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
       <tr>
-        <td><%= attivitum.data %></td>
-        <td><%= attivitum.titolo %></td>
-        <td><%= attivitum.luogo %></td>
-        <td><%= attivitum.descrizione %></td>
-        <td><%= link_to 'Show', attivitum %></td>
-        <td><%= link_to 'Edit', edit_attivitum_path(attivitum) %></td>
-        <td><%= link_to 'Destroy', attivitum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <th>Data</th>
+            <th>Titolo</th>
+            <th>Luogo</th>
+            <th>Descrizione</th>
+            <th></th>
+            <th></th>
+            <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Attivitum', new_attivitum_path %>
+    </thead>
+    <tbody>
+      <%= content_tag_for(:tr, @attivita) do |attivitum| %>
+            <td><%= attivitum.data %></td>
+            <td><%= attivitum.titolo %></td>
+            <td><%= attivitum.luogo %></td>
+            <td><%= attivitum.descrizione %></td>
+            <td><%= link_to 'Mostra', attivitum %></td>
+            <td><%= link_to 'Modifica', edit_attivitum_path(attivitum) %></td>
+            <td><%= link_to 'Elimina', attivitum, method: :delete, data: { confirm: 'Sei sicuro?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

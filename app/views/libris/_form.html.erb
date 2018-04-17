@@ -1,25 +1,125 @@
-<%= form_for(@libri) do |f| %>
+<%= form_for(@libri, html:{multipart:true, class: "form-horizontal", role: "form" }) do |f| %>
   <% if @libri.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@libri.errors.count, "error") %> prohibited this libri from being saved:</h2>
-
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Chiudi</span></button>
+      <h4><%= pluralize(@libri.errors.count, "error") %> Impossibile salvare questo libro:</h4>
       <ul>
-      <% @libri.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% @libri.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :titolo %><br>
-    <%= f.text_field :titolo %>
+  <div class="form-group">
+    <%= f.label :titolo, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :titolo, class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :prezzo %><br>
-    <%= f.text_field :prezzo %>
+  <div class="form-group">
+    <%= f.label :prezzo, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :prezzo, class: "form-control" %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.label :autore, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :autore, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :descrizione, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_area :descrizione, class: "form-control" %>
+    </div>
+  </div>
+
+  <!-- Ajax modal-->
+    <div class="form-group">
+        <label for="prodotto_id_cat" class="col-sm-2 control-label">Categoria</label>
+        <div class="col-sm-10">
+          <input type="text" id="ccv" disabled="disabled" class="">
+        <%= f.hidden_field :cat, id: :prodotto_id_cat%>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalA">
+            Seleziona Categoria
+          </button>
+        </div>
+          <div class="modal fade" id="exampleModalA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Seleziona Categoria</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <script>
+              function Dispose1( id, nome){
+                $('#prodotto_id_cat').val(id);
+        console.log(id)
+                  $('#ccv').val(nome);
+              }
+                        $(document).ready(function () {
+
+                        $.ajax({
+                            url: "/cat_libris.json",
+                            dataType: "json",
+                            timeout: 800000,
+                            cache: true}).done(function (o) {
+                            for (var i = 0; i < o.length; i++)
+                            {
+                                $('#tabprodottibody').append('<tr><td>' + o[i].nome + '</td><td>  <button type="button" data-dismiss="modal" class="btn btn-primary" onClick="Dispose1(\''+o[i].id+'\',\''+o[i].nome+'\')">Seleziona</button></td></tr> ');
+                            }
+                           
+                        });
+                    });
+                </script>
+              <div class="modal-body">
+                <table id="tabprodotti" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th></th>
+
+                    </tr>
+                </thead>
+                <tbody id="tabprodottibody">
+
+                </tbody>
+            </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+        
+        
+      </div>
+  
+  
+  
+  
+  
+  <!--Ajax modal  -->
+  <div class="form-group">
+    <%= f.label :immagine, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.file_field :immagine , class: "form-control"%>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :immagine, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.file_field :secondimmagine , class: "form-control"%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
   </div>
 <% end %>

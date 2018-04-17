@@ -1,35 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to new_corsi_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Nuovo Corso
+  <% end %>
+  <h1>Lista Corsi</h1>
+</div>
 
-<h1>Listing Corsis</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Data</th>
-      <th>Luogo</th>
-      <th>Titolo</th>
-      <th>Contatto</th>
-      <th>Descrizione</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @corsis.each do |corsi| %>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
       <tr>
-        <td><%= corsi.data %></td>
-        <td><%= corsi.luogo %></td>
-        <td><%= corsi.titolo %></td>
-        <td><%= corsi.contatto %></td>
-        <td><%= corsi.descrizione %></td>
-        <td><%= link_to 'Show', corsi %></td>
-        <td><%= link_to 'Edit', edit_corsi_path(corsi) %></td>
-        <td><%= link_to 'Destroy', corsi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <th>Data</th>
+            <th>Luogo</th>
+            <th>Titolo</th>
+            <th>Contatto</th>
+            <th>Descrizione</th>
+            <th></th>
+            <th></th>
+            <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Corsi', new_corsi_path %>
+    </thead>
+    <tbody>
+      <%= content_tag_for(:tr, @corsis) do |corsi| %>
+            <td><%= corsi.data %></td>
+            <td><%= corsi.luogo %></td>
+            <td><%= corsi.titolo %></td>
+            <td><%= corsi.contatto %></td>
+            <td><%= corsi.descrizione %></td>
+            <td><%= link_to 'Mostra', corsi %></td>
+            <td><%= link_to 'Modifica', edit_corsi_path(corsi) %></td>
+            <td><%= link_to 'Elimina', corsi, method: :delete, data: { confirm: 'Sei sicuro?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

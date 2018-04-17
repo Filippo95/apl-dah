@@ -1,29 +1,56 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to new_libri_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Nuovo Libro
+  <% end %>
+  <h1>Lista Libri</h1>
+</div>
 
-<h1>Listing Libris</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Titolo</th>
-      <th>Prezzo</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @libris.each do |libri| %>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
       <tr>
-        <td><%= libri.titolo %></td>
-        <td><%= libri.prezzo %></td>
-        <td><%= link_to 'Show', libri %></td>
-        <td><%= link_to 'Edit', edit_libri_path(libri) %></td>
-        <td><%= link_to 'Destroy', libri, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <th>Titolo</th>
+            <th>Prezzo</th>
+            <th>Autore</th>
+            <th>Descrizione</th>
+            <th >Cat</th>
+            <th></th>
+            <th></th>
+            <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Libri', new_libri_path %>
+    </thead>
+    <tbody>
+      <%= content_tag_for(:tr, @libris) do |libri| %>
+            <td><%= libri.titolo %></td>
+            <td><%= libri.prezzo %></td>
+            <td><%= libri.autore %></td>
+            <td><%= libri.descrizione %></td>
+            <td id="cat"><%= libri.cat %></td>
+            <td><%= link_to 'Mostra', libri %></td>
+            <td><%= link_to 'Modifica', edit_libri_path(libri) %></td>
+            <td><%= link_to 'Elimina', libri, method: :delete, data: { confirm: 'Sei sicuro?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<script>
+				$(document).ready(function () {
+  var categorie=$.ajax({
+                  url:"/cat_libris.json" ,
+                  async: false,
+                  dataType: 'json'
+              }).responseJSON;
+            $("tr").each(function() {
+            
+              var id_cat=$(this).find('#cat').text();
+              for (var i = 0; i < categorie.length; i++)
+              {
+                if(id_cat==categorie[i].id)
+                {
+                  $(this).find('#cat').text(categorie[i].nome);
+                }
+              }
+            });
+				} );
+</script>

@@ -1,6 +1,13 @@
-<h1>Editing Corsi</h1>
+<div class="page-header">
+  <%= link_to corsis_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Indietro
+  <% end %>
+  <%= link_to @corsi, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Mostra
+  <% end %>
+  <h1>Modifica Corsi</h1>
+</div>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @corsi %> |
-<%= link_to 'Back', corsis_path %>

@@ -1,29 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to corsis_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Indietro
+  <% end %>
+  <%= link_to edit_corsi_path(@corsi), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Modifica
+  <% end %>
+  <h1>Mostra Corsi</h1>
+</div>
 
-<p>
-  <strong>Data:</strong>
-  <%= @corsi.data %>
-</p>
+<dl class="dl-horizontal">
+  <dt>Data:</dt>
+  <dd><%= @corsi.data %></dd>
 
-<p>
-  <strong>Luogo:</strong>
-  <%= @corsi.luogo %>
-</p>
+  <dt>Luogo:</dt>
+  <dd><%= @corsi.luogo %></dd>
 
-<p>
-  <strong>Titolo:</strong>
-  <%= @corsi.titolo %>
-</p>
+  <dt>Titolo:</dt>
+  <dd><%= @corsi.titolo %></dd>
 
-<p>
-  <strong>Contatto:</strong>
-  <%= @corsi.contatto %>
-</p>
+  <dt>Contatto:</dt>
+  <dd><%= @corsi.contatto %></dd>
 
-<p>
-  <strong>Descrizione:</strong>
-  <%= @corsi.descrizione %>
-</p>
-
-<%= link_to 'Edit', edit_corsi_path(@corsi) %> |
-<%= link_to 'Back', corsis_path %>
+  <dt>Descrizione:</dt>
+  <dd><%= @corsi.descrizione %></dd>
+  
+  <%= link_to "Visualizza Allegato", @corsi.image.url, target: "_blank" %> 
+  <br/>
+</dl>

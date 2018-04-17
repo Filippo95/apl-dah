@@ -1,5 +1,9 @@
-<h1>New Corsi</h1>
+<div class="page-header">
+  <%= link_to corsis_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Indietro
+  <% end %>
+  <h1>Nuovo Corso</h1>
+</div>
 
 <%= render 'form' %>
-
-<%= link_to 'Back', corsis_path %>

@@ -1,33 +1,47 @@
-<%= form_for(@attivitum) do |f| %>
+<%= form_for(@attivitum, html:{multipart:true, class: "form-horizontal", role: "form" }) do |f| %>
   <% if @attivitum.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@attivitum.errors.count, "error") %> prohibited this attivitum from being saved:</h2>
-
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Chiudi</span></button>
+      <h4><%= pluralize(@attivitum.errors.count, "error") %> Impossibile salvare questa attività:</h4>
       <ul>
-      <% @attivitum.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% @libri.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :data %><br>
-    <%= f.date_select :data %>
+  
+  <div class="form-group">
+    <%= f.label :data , class: "col-sm-2 control-label"%>
+    <div class="col-sm-10">
+      <%= f.date_select :data, class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :titolo %><br>
-    <%= f.text_field :titolo %>
+  
+  <div class="form-group">
+    <%= f.label :titolo, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :titolo, class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :luogo %><br>
-    <%= f.text_area :luogo %>
+  
+  <div class="form-group">
+    <%= f.label :luogo, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :luogo , class: "form-control"%>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :descrizione %><br>
-    <%= f.text_area :descrizione %>
+  
+  <div class="form-group">
+    <%= f.label :descrizione, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_area :descrizione, class: "form-control" %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
   </div>
 <% end %>

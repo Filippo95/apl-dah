@@ -1,0 +1,19 @@
+<div class="page-header">
+  <%= link_to cat_libris_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Indietro
+  <% end %>
+  <%= link_to edit_cat_libri_path(@cat_libri), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Modifica
+  <% end %>
+  <h1>Mostra Categorie</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Nome:</dt>
+  <dd><%= @cat_libri.nome %></dd>
+
+  <dt>Descrizione:</dt>
+  <dd><%= @cat_libri.descrizione %></dd>
+</dl>

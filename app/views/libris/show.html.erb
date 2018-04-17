@@ -1,14 +1,55 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to libris_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Indietro
+  <% end %>
+  <%= link_to edit_libri_path(@libri), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Modifica
+  <% end %>
+  <h1>Mostra Libri</h1>
+</div>
 
-<p>
-  <strong>Titolo:</strong>
-  <%= @libri.titolo %>
-</p>
+<dl class="dl-horizontal">
+  <dt>Titolo:</dt>
+  <dd><%= @libri.titolo %></dd>
 
-<p>
-  <strong>Prezzo:</strong>
-  <%= @libri.prezzo %>
-</p>
+  <dt>Prezzo:</dt>
+  <dd><%= @libri.prezzo %></dd>
 
-<%= link_to 'Edit', edit_libri_path(@libri) %> |
-<%= link_to 'Back', libris_path %>
+  <dt>Autore:</dt>
+  <dd><%= @libri.autore %></dd>
+
+  <dt>Descrizione:</dt>
+  <dd><%= @libri.descrizione %></dd>
+
+  <dt>Categoria:</dt> 
+  
+  <dd id="<%= @libri.cat %>"></dd>
+  <br>
+  
+  <%= link_to "Visualizza Allegato", @libri.image.url, target: "_blank" %> 
+  <br/>
+  <%= link_to "Visualizza Allegato", @libri.secondimage.url, target: "_blank" %> 
+  <br/>
+</dl>
+<script>
+$(document).ready(function () {
+
+    var categorie=$.ajax({
+        url:"/cat_libris.json" ,
+        async: false,
+        dataType: 'json'
+    }).responseJSON;
+
+
+    for (var i = 0; i < categorie.length; i++)
+    {
+          $('#'+categorie[i].id).text(categorie[i].nome);
+          console.log("ho settato il parente di "+categorie[i].nome+" ed è: "+categorie[i].nome)
+    }
+
+
+} );
+
+</script>

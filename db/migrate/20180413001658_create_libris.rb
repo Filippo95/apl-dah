@@ -3,6 +3,9 @@ class CreateLibris < ActiveRecord::Migration
     create_table :libris do |t|
       t.string :titolo
       t.float :prezzo
+      t.string :autore
+      t.text :descrizione
+      t.integer :cat
 
       t.timestamps null: false
     end

@@ -3,7 +3,13 @@
 one:
   titolo: MyString
   prezzo: 1.5
+  autore: MyString
+  descrizione: MyText
+  cat: 1
 
 two:
   titolo: MyString
   prezzo: 1.5
+  autore: MyString
+  descrizione: MyText
+  cat: 1
