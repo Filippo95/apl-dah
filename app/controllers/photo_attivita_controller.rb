@@ -28,7 +28,7 @@ class PhotoAttivitaController < ApplicationController
 
     respond_to do |format|
       if @photo_attivitum.save
-        format.html { redirect_to @photo_attivitum, notice: 'Photo attivitum was successfully created.' }
+        format.html { redirect_to attivita_path, notice: 'Il file è stato caricato con successo.' }
         format.json { render :show, status: :created, location: @photo_attivitum }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class PhotoAttivitaController < ApplicationController
   def update
     respond_to do |format|
       if @photo_attivitum.update(photo_attivitum_params)
-        format.html { redirect_to @photo_attivitum, notice: 'Photo attivitum was successfully updated.' }
+        format.html { redirect_to @photo_attivitum, notice: 'Il file è stato modificato con successo.' }
         format.json { render :show, status: :ok, location: @photo_attivitum }
       else
         format.html { render :edit }
@@ -63,7 +63,7 @@ class PhotoAttivitaController < ApplicationController
   def destroy
     @photo_attivitum.destroy
     respond_to do |format|
-      format.html { redirect_to photo_attivita_url, notice: 'Photo attivitum was successfully destroyed.' }
+      format.html { redirect_to attivita_path, notice: 'Il file è stato eliminato con successo' }
       format.json { head :no_content }
     end
   end

@@ -36,7 +36,7 @@ class SeminarisController < ApplicationController
 
     respond_to do |format|
       if @seminari.save
-        format.html { redirect_to @seminari, notice: 'Seminari was successfully created.' }
+        format.html { redirect_to @seminari, notice: 'Il seminario è stato inserito con successo.' }
         format.json { render :show, status: :created, location: @seminari }
       else
         format.html { render :new }
@@ -50,7 +50,7 @@ class SeminarisController < ApplicationController
   def update
     respond_to do |format|
       if @seminari.update(seminari_params)
-        format.html { redirect_to @seminari, notice: 'Seminari was successfully updated.' }
+        format.html { redirect_to @seminari, notice: 'Il seminario è stato modificato con successo.' }
         format.json { render :show, status: :ok, location: @seminari }
       else
         format.html { render :edit }
@@ -64,7 +64,7 @@ class SeminarisController < ApplicationController
   def destroy
     @seminari.destroy
     respond_to do |format|
-      format.html { redirect_to seminaris_url, notice: 'Seminari was successfully destroyed.' }
+      format.html { redirect_to seminaris_url, notice: 'Il seminario è stato eliminato con successo.' }
       format.json { head :no_content }
     end
   end

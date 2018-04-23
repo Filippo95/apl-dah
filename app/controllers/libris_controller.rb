@@ -28,7 +28,7 @@ class LibrisController < ApplicationController
 
     respond_to do |format|
       if @libri.save
-        format.html { redirect_to @libri, notice: 'Libri was successfully created.' }
+        format.html { redirect_to @libri, notice: 'Il libro è stato inserito con successo.' }
         format.json { render :show, status: :created, location: @libri }
       else
         format.html { render :new }
@@ -57,7 +57,7 @@ class LibrisController < ApplicationController
   def update
     respond_to do |format|
       if @libri.update(libri_params)
-        format.html { redirect_to @libri, notice: 'Libri was successfully updated.' }
+        format.html { redirect_to @libri, notice: 'Il libro è stato modificato con successo.' }
         format.json { render :show, status: :ok, location: @libri }
       else
         format.html { render :edit }
@@ -71,7 +71,7 @@ class LibrisController < ApplicationController
   def destroy
     @libri.destroy
     respond_to do |format|
-      format.html { redirect_to libris_url, notice: 'Libri was successfully destroyed.' }
+      format.html { redirect_to libris_url, notice: 'Il libro è stato eliminato con successo.' }
       format.json { head :no_content }
     end
   end
