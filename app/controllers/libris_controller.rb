@@ -39,9 +39,10 @@ class LibrisController < ApplicationController
   def getfirstattached
     @libri = Libri.find(params[:id])
   
-   respond_to do |format|
+    respond_to do |format|
  
-    format.html { render :text => @libri.image.url.html_safe}
+      format.html { render :text => @libri.image.url.html_safe}
+    end
   end
 
   def getsecondattached
