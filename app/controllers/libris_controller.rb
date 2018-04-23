@@ -43,14 +43,13 @@ class LibrisController < ApplicationController
  
     format.html { render :text => @libri.image.url.html_safe}
   end
-  end
+
   def getsecondattached
-    @libri = Libri.find(params[:id])
   
-   respond_to do |format|
- 
-    format.html { render :text => @libri.secondimage.url.html_safe}
-  end
+  @libri = Libri.where(id: params[:id])
+
+
+  render json: @libri
   end
   # PATCH/PUT /libris/1
   # PATCH/PUT /libris/1.json

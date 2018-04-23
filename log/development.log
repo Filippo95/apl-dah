@@ -35759,3 +35759,245 @@ Processing by CatLibrisController#index as JSON
   Rendered cat_libris/_cat_libri.json.jbuilder (0.2ms)
   Rendered cat_libris/index.json.jbuilder (17.4ms)
 Completed 200 OK in 37ms (Views: 6.8ms | ActiveRecord: 27.8ms)
+
+
+Started GET "/" for 2.34.237.245 at 2018-04-23 08:18:46 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (14.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mUser Load (15.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Processing by SeminarisController#index as HTML
+  [1m[36mSeminari Load (15.0ms)[0m  [1mSELECT `seminaris`.* FROM `seminaris`[0m
+  Rendered seminaris/index.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 564ms (Views: 515.1ms | ActiveRecord: 45.1ms)
+
+
+Started GET "/assets/bootstrap-generators.self-81ad5aa076bb65d8320d4d9128934cf5c4663e9d855d712d0049b4ac6bc177a7.css?body=1" for 2.34.237.245 at 2018-04-23 08:18:47 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 2.34.237.245 at 2018-04-23 08:18:47 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:47 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:47 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:47 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-variables.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 2.34.237.245 at 2018-04-23 08:18:48 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:48 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:48 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:48 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:48 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:48 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:48 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:48 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:48 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:48 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:48 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:48 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:48 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/attivita.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:49 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cat_libris.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:49 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/corsis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:49 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/libris.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:49 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/photo_attivita.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:49 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/seminaris.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:49 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:49 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for 2.34.237.245 at 2018-04-23 08:18:49 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 2.34.237.245 at 2018-04-23 08:18:49 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/seminaris/4" for 2.34.237.245 at 2018-04-23 08:18:51 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeminarisController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mSeminari Load (15.1ms)[0m  SELECT  `seminaris`.* FROM `seminaris` WHERE `seminaris`.`id` = 4 LIMIT 1
+  Rendered seminaris/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 73ms (Views: 51.9ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/attivita" for 2.34.237.245 at 2018-04-23 08:18:55 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AttivitaController#index as HTML
+  [1m[36mUser Load (15.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mAttivitum Load (15.1ms)[0m  SELECT `attivita`.* FROM `attivita`
+  Rendered attivita/index.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 201ms (Views: 125.5ms | ActiveRecord: 60.4ms)
+
+
+Started GET "/attivita/5" for 2.34.237.245 at 2018-04-23 08:18:57 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AttivitaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (15.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mAttivitum Load (15.1ms)[0m  SELECT  `attivita`.* FROM `attivita` WHERE `attivita`.`id` = 5 LIMIT 1
+  Rendered attivita/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 89ms (Views: 54.8ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/photo_attivita/getattached/5" for 2.34.237.245 at 2018-04-23 08:18:57 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotoAttivitaController#getattached as JSON
+  Parameters: {"id_attivita"=>"5"}
+  [1m[36mUser Load (15.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPhotoAttivitum Load (15.1ms)[0m  SELECT `photo_attivita`.* FROM `photo_attivita` WHERE `photo_attivita`.`id_attivita` = 5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 77ms (Views: 26.5ms | ActiveRecord: 45.5ms)
+
+
+Started POST "/photo_attivita" for 2.34.237.245 at 2018-04-23 08:19:06 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotoAttivitaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IdIQIb6loUTuQJriYC0Lnn3UC7EoPvGMg7cIu4QjZgn/YHtrqmjDmxk8AuaLwu6O8NjWIM0OddsP4UAsupRO9Q==", "photo_attivitum"=>{"id_attivita"=>"5", "titolo"=>"ffda", "image"=>#<ActionDispatch::Http::UploadedFile:0x000000037b1490 @tempfile=#<Tempfile:/tmp/RackMultipart20180423-4775-1l6403g.png>, @original_filename="Schermata del 2017-05-24 01-49-03.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"photo_attivitum[image]\"; filename=\"Schermata del 2017-05-24 01-49-03.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Carica"}
+Can't verify CSRF token authenticity
+[paperclip] Trying to link /tmp/RackMultipart20180423-4775-1l6403g.png to /tmp/99b5296dcee6d0bdfa44a7203accd78a20180423-4775-dw0ncx.png
+[paperclip] Trying to link /tmp/99b5296dcee6d0bdfa44a7203accd78a20180423-4775-dw0ncx.png to /tmp/ee7dc4ee41f1115dca6e0d46ca82564020180423-4775-146e5hz.png
+Command :: file -b --mime '/tmp/ee7dc4ee41f1115dca6e0d46ca82564020180423-4775-146e5hz.png'
+  [1m[36m (15.0ms)[0m  [1mBEGIN[0m
+[paperclip] Trying to link /tmp/99b5296dcee6d0bdfa44a7203accd78a20180423-4775-dw0ncx.png to /tmp/ee7dc4ee41f1115dca6e0d46ca82564020180423-4775-rrv510.png
+Command :: file -b --mime '/tmp/ee7dc4ee41f1115dca6e0d46ca82564020180423-4775-rrv510.png'
+  [1m[35mSQL (15.0ms)[0m  INSERT INTO `photo_attivita` (`id_attivita`, `titolo`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`, `created_at`, `updated_at`) VALUES (5, 'ffda', 'Schermata_del_2017-05-24_01-49-03.png', 'image/png', 60016, '2018-04-23 08:19:07', '2018-04-23 08:19:07', '2018-04-23 08:19:07')
+  [1m[36m (16.7ms)[0m  [1mCOMMIT[0m
+Redirected to https://aplomb-app-cloned-filippo95.c9users.io/attivita
+Completed 302 Found in 119ms (ActiveRecord: 61.6ms)
+
+
+Started GET "/attivita" for 2.34.237.245 at 2018-04-23 08:19:07 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AttivitaController#index as HTML
+  [1m[35mUser Load (15.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mAttivitum Load (15.0ms)[0m  [1mSELECT `attivita`.* FROM `attivita`[0m
+  Rendered attivita/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 98ms (Views: 61.0ms | ActiveRecord: 30.1ms)
+
+
+Started GET "/attivita/5" for 2.34.237.245 at 2018-04-23 08:19:09 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AttivitaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (15.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mAttivitum Load (14.9ms)[0m  [1mSELECT  `attivita`.* FROM `attivita` WHERE `attivita`.`id` = 5 LIMIT 1[0m
+  Rendered attivita/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 150ms (Views: 116.6ms | ActiveRecord: 29.9ms)
+
+
+Started GET "/photo_attivita/getattached/5" for 2.34.237.245 at 2018-04-23 08:19:09 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotoAttivitaController#getattached as JSON
+  Parameters: {"id_attivita"=>"5"}
+  [1m[35mUser Load (15.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mPhotoAttivitum Load (15.1ms)[0m  [1mSELECT `photo_attivita`.* FROM `photo_attivita` WHERE `photo_attivita`.`id_attivita` = 5[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.93ms)
+Completed 200 OK in 41ms (Views: 9.7ms | ActiveRecord: 30.1ms)
+
+
+Started GET "/system/photo_attivita/images/000/000/029/original" for 2.34.237.245 at 2018-04-23 08:25:50 +0000
+Cannot render console from 2.34.237.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/system/photo_attivita/images/000/000/029/original"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (42.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (109.7ms)
