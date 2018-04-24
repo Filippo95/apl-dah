@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :cat_libris
-  resources :photo_attivita
-  resources :libris
-  resources :libris
+   
   get 'corsis/getattached/:id'=> 'corsis#getattached'
   
   get 'seminaris/getattached/:id'=> 'seminaris#getattached'
@@ -13,6 +10,8 @@ Rails.application.routes.draw do
   
   
   get 'photo_attivita/getattached/:id_attivita'=> 'photo_attivita#getattached'
+
+
   authenticated :user do
 root to: 'seminaris#index', as: :authenticated_root
 end
@@ -22,6 +21,22 @@ root to: redirect('/users/sign_in')
   resources :corsis
   resources :attivita
   resources :seminaris
+  resources :cat_libris
+  resources :photo_attivita
+   get 'users/index'
+
+ match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
+  match '/users',   to: 'users#index',   via: 'get'
+  match '/users/sign_up',   to: 'devise/registrations#new',   via: 'get'
+   match '/users/sign_out',   to: 'devise/sessions#destroy',   via: 'delete'
+  
+   match '/users/sign_in',   to: 'devise/sessions#create',   via: 'post'
+   
+   match '/users/sign_in',   to: 'devise/sessions#new',   via: 'get'
+   
+   
+ 
+   
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

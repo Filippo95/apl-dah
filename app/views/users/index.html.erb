@@ -1,0 +1,8 @@
+<div class="page-header">
+  <h1>Utenti</h1>
+</div>
+<p>Area riservata amministratori</p>
+<% @users = User.all %>
+<% @users.each do |user| %>
+  <%= user.email %>-----------------<%= link_to "Destroy", admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } %><br/>
+<% end %>

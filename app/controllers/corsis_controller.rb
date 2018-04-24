@@ -1,6 +1,6 @@
 class CorsisController < ApplicationController
   before_action :set_corsi, only: [:show, :edit, :update, :destroy]
- skip_before_action :authenticate_user!
+ skip_before_action :authenticate_user!, only: [:getattached]
   # GET /corsis
   # GET /corsis.json
   def index
@@ -38,7 +38,7 @@ class CorsisController < ApplicationController
 
     respond_to do |format|
       if @corsi.save
-        format.html { redirect_to @corsi, notice: 'Corsi was successfully created.' }
+        format.html { redirect_to @corsi, notice: 'Il corso è stato creato con successo.' }
         format.json { render :show, status: :created, location: @corsi }
       else
         format.html { render :new }

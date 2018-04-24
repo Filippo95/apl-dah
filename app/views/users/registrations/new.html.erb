@@ -1,5 +1,5 @@
 <h2>Registrati</h2>
-
+<%if  current_user && current_user.admin?%>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -24,6 +24,9 @@
   <div class="actions">
     <%= f.submit "Registrati" %>
   </div>
+<% end %>
+<% else %>
+<h1>devi essere amministratore</h1>
 <% end %>
 
 <%= render "users/shared/links" %>

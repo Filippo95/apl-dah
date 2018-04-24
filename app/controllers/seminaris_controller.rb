@@ -1,6 +1,6 @@
 class SeminarisController < ApplicationController
   before_action :set_seminari, only: [:show, :edit, :update, :destroy]
- skip_before_action :authenticate_user!
+ skip_before_action :authenticate_user!, only: [:getattached]
   # GET /seminaris
   # GET /seminaris.json
   def index
