@@ -6,6 +6,7 @@ class CreateCorsis < ActiveRecord::Migration
       t.string :titolo
       t.text :contatto
       t.text :descrizione
+      t.string :visibilit
 
       t.timestamps null: false
     end

@@ -1,3 +1,4 @@
+
 <div class="page-header">
   <%= link_to libris_path, class: 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
@@ -26,6 +27,9 @@
   <dt>Categoria:</dt> 
   
   <dd id="<%= @libri.cat %>"></dd>
+  
+  <dt>Order:</dt>
+  <dd><%= @libri.order %></dd>
   <br>
   
   <%= link_to "Visualizza Allegato", @libri.image.url, target: "_blank" %> 
@@ -35,21 +39,15 @@
 </dl>
 <script>
 $(document).ready(function () {
-
     var categorie=$.ajax({
         url:"/cat_libris.json" ,
         async: false,
         dataType: 'json'
     }).responseJSON;
-
-
     for (var i = 0; i < categorie.length; i++)
     {
           $('#'+categorie[i].id).text(categorie[i].nome);
           console.log("ho settato il parente di "+categorie[i].nome+" ed è: "+categorie[i].nome)
     }
-
-
 } );
-
 </script>

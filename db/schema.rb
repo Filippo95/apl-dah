@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180423184805) do
+ActiveRecord::Schema.define(version: 20180507002004) do
 
   create_table "attivita", force: :cascade do |t|
     t.date     "data"
@@ -31,16 +31,13 @@ ActiveRecord::Schema.define(version: 20180423184805) do
 
   create_table "corsis", force: :cascade do |t|
     t.date     "data"
-    t.text     "luogo",              limit: 65535
-    t.string   "titolo",             limit: 255
-    t.text     "contatto",           limit: 65535
-    t.text     "descrizione",        limit: 65535
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-    t.string   "image_file_name",    limit: 255
-    t.string   "image_content_type", limit: 255
-    t.integer  "image_file_size",    limit: 4
-    t.datetime "image_updated_at"
+    t.text     "luogo",       limit: 65535
+    t.string   "titolo",      limit: 255
+    t.text     "contatto",    limit: 65535
+    t.text     "descrizione", limit: 65535
+    t.string   "visibilit",   limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "libris", force: :cascade do |t|
@@ -49,6 +46,7 @@ ActiveRecord::Schema.define(version: 20180423184805) do
     t.string   "autore",                   limit: 255
     t.text     "descrizione",              limit: 65535
     t.integer  "cat",                      limit: 4
+    t.integer  "order",                    limit: 4
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.string   "image_file_name",          limit: 255

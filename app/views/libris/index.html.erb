@@ -15,6 +15,7 @@
             <th>Autore</th>
             <th>Descrizione</th>
             <th>Categorie Libri</th>
+            <th>Ordine</th>
             <th></th>
             <th></th>
             <th></th>
@@ -26,7 +27,9 @@
             <td><%= libri.prezzo %></td>
             <td><%= libri.autore %></td>
             <td><%= libri.descrizione %></td>
+            
             <td id="cat"><%= libri.cat %></td>
+            <td><%= libri.order %></td>
             <td><%= link_to 'Mostra', libri %></td>
             <td><%= link_to 'Modifica', edit_libri_path(libri) %></td>
             <td><%= link_to 'Elimina', libri, method: :delete, data: { confirm: 'Sei sicuro?' } %></td>

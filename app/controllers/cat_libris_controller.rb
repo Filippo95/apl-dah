@@ -28,7 +28,7 @@ class CatLibrisController < ApplicationController
 
     respond_to do |format|
       if @cat_libri.save
-        format.html { redirect_to @cat_libri, notice: 'Cat libri was successfully created.' }
+        format.html { redirect_to @cat_libri, notice: 'La categoria è stata inserita con successo.' }
         format.json { render :show, status: :created, location: @cat_libri }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class CatLibrisController < ApplicationController
   def update
     respond_to do |format|
       if @cat_libri.update(cat_libri_params)
-        format.html { redirect_to @cat_libri, notice: 'Cat libri was successfully updated.' }
+        format.html { redirect_to @cat_libri, notice: 'La categoria è stata modificata con successo.' }
         format.json { render :show, status: :ok, location: @cat_libri }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class CatLibrisController < ApplicationController
   def destroy
     @cat_libri.destroy
     respond_to do |format|
-      format.html { redirect_to cat_libris_url, notice: 'Cat libri was successfully destroyed.' }
+      format.html { redirect_to cat_libris_url, notice: 'La categoria è stata eliminata con successo.' }
       format.json { head :no_content }
     end
   end

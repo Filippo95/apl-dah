@@ -1,5 +1,6 @@
 class LibrisController < ApplicationController
   before_action :set_libri, only: [:show, :edit, :update, :destroy]
+
  skip_before_action :authenticate_user!, only: [:getfirstattached,:getsecondattached]
   # GET /libris
   # GET /libris.json
@@ -36,13 +37,14 @@ class LibrisController < ApplicationController
       end
     end
   end
+  
   def getfirstattached
     @libri = Libri.find(params[:id])
   
    respond_to do |format|
  
     format.html { render :text => @libri.image.url.html_safe}
-  end
+      end
   end
   def getsecondattached
     @libri = Libri.find(params[:id])
@@ -52,6 +54,7 @@ class LibrisController < ApplicationController
     format.html { render :text => @libri.secondimage.url.html_safe}
   end
   end
+
   # PATCH/PUT /libris/1
   # PATCH/PUT /libris/1.json
   def update
@@ -84,6 +87,6 @@ class LibrisController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def libri_params
-      params.require(:libri).permit(:titolo, :prezzo, :autore, :descrizione, :cat, :image, :secondimage)
+      params.require(:libri).permit(:titolo, :prezzo, :autore, :descrizione, :cat, :order,:image, :secondimage)
     end
 end

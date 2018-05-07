@@ -6,6 +6,7 @@ class CreateLibris < ActiveRecord::Migration
       t.string :autore
       t.text :descrizione
       t.integer :cat
+      t.integer :order
 
       t.timestamps null: false
     end

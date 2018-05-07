@@ -28,7 +28,7 @@ class AttivitaController < ApplicationController
 
     respond_to do |format|
       if @attivitum.save
-        format.html { redirect_to @attivitum, notice: 'Attivitum was successfully created.' }
+        format.html { redirect_to @attivitum, notice: "L'attività è stata inserita con successo." }
         format.json { render :show, status: :created, location: @attivitum }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class AttivitaController < ApplicationController
   def update
     respond_to do |format|
       if @attivitum.update(attivitum_params)
-        format.html { redirect_to @attivitum, notice: 'Attivitum was successfully updated.' }
+        format.html { redirect_to @attivitum, notice: "L'attività è stata modificata con successo." }
         format.json { render :show, status: :ok, location: @attivitum }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class AttivitaController < ApplicationController
   def destroy
     @attivitum.destroy
     respond_to do |format|
-      format.html { redirect_to attivita_url, notice: 'Attivitum was successfully destroyed.' }
+      format.html { redirect_to attivita_url, notice: "L'attività è stata eliminata con successo." }
       format.json { head :no_content }
     end
   end

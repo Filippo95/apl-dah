@@ -23,6 +23,19 @@ class CorsisController < ApplicationController
 
   # POST /corsis
   # POST /corsis.json
+  def create
+    @corsi = Corsi.new(corsi_params)
+
+    respond_to do |format|
+      if @corsi.save
+        format.html { redirect_to @corsi, notice: 'Corsi was successfully created.' }
+        format.json { render :show, status: :created, location: @corsi }
+      else
+        format.html { render :new }
+        format.json { render json: @corsi.errors, status: :unprocessable_entity }
+      end
+    end
+  end
   def getattached
     @corsi = Corsi.find(params[:id])
   
@@ -31,22 +44,6 @@ class CorsisController < ApplicationController
     format.html { render :text => @corsi.image.url.html_safe}
   end
   end
-  
-  
-  def create
-    @corsi = Corsi.new(corsi_params)
-
-    respond_to do |format|
-      if @corsi.save
-        format.html { redirect_to @corsi, notice: 'Il corso è stato creato con successo.' }
-        format.json { render :show, status: :created, location: @corsi }
-      else
-        format.html { render :new }
-        format.json { render json: @corsi.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
   # PATCH/PUT /corsis/1
   # PATCH/PUT /corsis/1.json
   def update
@@ -79,6 +76,6 @@ class CorsisController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def corsi_params
-      params.require(:corsi).permit(:data, :luogo, :titolo, :contatto, :descrizione, :image)
+      params.require(:corsi).permit(:data, :luogo, :titolo, :contatto, :descrizione, :visibilit, :image)
     end
 end
